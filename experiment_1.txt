@@ -1,0 +1,96 @@
+n = 1000	  ncond=3.0
+ME	Iter= 49.0000 	 Time= 0.0950	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0150	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0000	 NrmG= -1031.2537
+ABBmin1	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+n = 1000	  ncond=6.0
+ME	Iter= 873.0000 	 Time= 2.9270	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0000	 NrmG= -11669.3214
+ABBmin1	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+n = 1000	  ncond=9.0
+ME	Iter= 17295.0000 	 Time= 47.3780	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0000	 NrmG= -164378.3309
+ABBmin1	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+n = 1000	  ncond=12.0
+ME	Iter= 261912.0000 	 Time= 600.0020	 NrmG= 0.0000
+REM	 Iter= 653.0000	 Time= 0.6850	 NrmG= 0.0000
+MEM	 Iter= 43.0000	 Time= 0.0920	 NrmG= 0.0000
+CG	Iter= 75.0000	 Time= 0.1100	 NrmG= 0.0000
+DWGM	Iter= 51.0000	 Time= 0.0320	 NrmG= 0.0000
+BB1	Iter= 69994.0000	 Time= 37.6840	 NrmG= -2172419.4046
+ABBmin1	Iter= 89.0000	 Time= 0.0510	 NrmG= 0.0000
+n = 2500	  ncond=3.0
+ME	Iter= 50.0000 	 Time= 1.0740	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0000	 NrmG= -2641.6903
+ABBmin1	Iter= 1.0000	 Time= 0.0000	 NrmG= 0.0000
+n = 2500	  ncond=6.0
+ME	Iter= 889.0000 	 Time= 21.3320	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0160	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0000	 NrmG= -29356.9065
+ABBmin1	Iter= 1.0000	 Time= 0.0160	 NrmG= 0.0000
+n = 2500	  ncond=9.0
+ME	Iter= 17319.0000 	 Time= 426.2860	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0040	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0040	 NrmG= -387982.6521
+ABBmin1	Iter= 1.0000	 Time= 0.0040	 NrmG= 0.0000
+n = 2500	  ncond=12.0
+ME	Iter= 24808.0000 	 Time= 600.0150	 NrmG= 3.7499
+REM	 Iter= 3516.0000	 Time= 33.4460	 NrmG= 0.0000
+MEM	 Iter= 1529.0000	 Time= 14.8310	 NrmG= 0.0000
+CG	Iter= 2880.0000	 Time= 42.4280	 NrmG= 0.0000
+DWGM	Iter= 2390.0000	 Time= 11.1410	 NrmG= 0.0000
+BB1	Iter= 87365.0000	 Time= 357.2790	 NrmG= NaN
+ABBmin1	Iter= 3547.0000	 Time= 15.4630	 NrmG= 0.0000
+n = 5000	  ncond=3.0
+ME	Iter= 51.0000 	 Time= 3.3630	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0110	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0040	 NrmG= -5295.2332
+ABBmin1	Iter= 1.0000	 Time= 0.0230	 NrmG= 0.0000
+n = 5000	  ncond=6.0
+ME	Iter= 905.0000 	 Time= 61.3230	 NrmG= 0.0000
+REM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+MEM	 Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+CG	Iter= 0.0000	 Time= 0.0000	 NrmG= 0.0000
+DWGM	Iter= 1.0000	 Time= 0.0160	 NrmG= 0.0000
+BB1	Iter= 0.0000	 Time= 0.0160	 NrmG= -57512.9906
+ABBmin1	Iter= 1.0000	 Time= 0.0180	 NrmG= 0.0000
+n = 5000	  ncond=9.0
+ME	Iter= 9069.0000 	 Time= 600.0400	 NrmG= 0.0007
+REM	 Iter= 323.0000	 Time= 6.9860	 NrmG= 0.0000
+MEM	 Iter= 59.0000	 Time= 1.3060	 NrmG= 0.0000
+CG	Iter= 111.0000	 Time= 4.7780	 NrmG= 0.0000
+DWGM	Iter= 71.0000	 Time= 0.7660	 NrmG= 0.0000
+BB1	Iter= 1409.0000	 Time= 16.7530	 NrmG= -766188.2024
+ABBmin1	Iter= 93.0000	 Time= 1.1090	 NrmG= 0.0000
+n = 5000	  ncond=12.0
+ME	Iter= 9588.0000 	 Time= 600.0640	 NrmG= 22.2277
+REM	 Iter= 3021.0000	 Time= 63.9260	 NrmG= 0.0000
+MEM	 Iter= 1991.0000	 Time= 44.3250	 NrmG= 0.0000
+CG	Iter= 3582.0000	 Time= 159.0590	 NrmG= 0.0000
+DWGM	Iter= 3088.0000	 Time= 34.3680	 NrmG= 0.0000
+BB1	Iter= 125917.0000	 Time= 1435.3070	 NrmG= -11118250.5799
+ABBmin1	Iter= 4368.0000	 Time= 51.8790	 NrmG= 0.0000

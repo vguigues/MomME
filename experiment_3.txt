@@ -1,0 +1,252 @@
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Kuu.mat
+ME	Iter= 4542.0000 	 Time= 600.0039999
+RelaxME	 Iter= 774.0000	 Time= 33.0550001
+MomME	 Iter= 179.0000	 Time= 7.8529999
+CG	Iter= 93.0000	 Time= 8.1150000
+DWGM	Iter= 65.0000	 Time= 1.4269998
+BB1	Iter= 1136.0000	 Time= 25.2240002
+ABBmin1	Iter= 331.0000	 Time= 7.4169998
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\LF10.mat
+ME	Iter= 500000.0000 	 Time= 0.5390000
+RelaxME	 Iter= 11109.0000	 Time= 0.0070000
+MomME	 Iter= 90.0000	 Time= 0.0000000
+CG	Iter= 27.0000	 Time= 0.0009999
+DWGM	Iter= 35.0000	 Time= 0.0000000
+BB1	Iter= 454948.0000	 Time= 0.1230001
+ABBmin1	Iter= 1293.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Muu.mat
+ME	Iter= 43.0000 	 Time= 6.0720000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0280001
+BB1	Iter= 0.0000	 Time= 0.0260000
+ABBmin1	Iter= 1.0000	 Time= 0.0260000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_150.mat
+ME	Iter= 1630.0000 	 Time= 0.1399999
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_20.mat
+ME	Iter= 138.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_2000.mat
+ME	Iter= 32696.0000 	 Time= 176.7120001
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0009999
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_20b.mat
+ME	Iter= 72.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_300.mat
+ME	Iter= 3742.0000 	 Time= 0.2390001
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_500.mat
+ME	Iter= 6720.0000 	 Time= 1.3039999
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm02.mat
+ME	Iter= 19.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm05.mat
+ME	Iter= 28.0000 	 Time= 0.0010002
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm07.mat
+ME	Iter= 12752.0000 	 Time= 1.2419999
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm09.mat
+ME	Iter= 1.0000 	 Time= 0.0009999
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm21.mat
+ME	Iter= 5.0000 	 Time= 0.1790001
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0060000
+BB1	Iter= 0.0000	 Time= 0.0060000
+ABBmin1	Iter= 1.0000	 Time= 0.0060000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bcsstm22.mat
+ME	Iter= 563.0000 	 Time= 0.0070000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\bibd_81_2.mat
+ME	Iter= 1.0000 	 Time= 0.0309999
+RelaxME	 Iter= 9.0000	 Time= 0.0910001
+MomME	 Iter= 1.0000	 Time= 0.0100002
+CG	Iter= 1.0000	 Time= 0.0090001
+DWGM	Iter= 2.0000	 Time= 0.0109999
+BB1	Iter= 2.0000	 Time= 0.0139999
+ABBmin1	Iter= 2.0000	 Time= 0.0089998
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\crystm01.mat
+ME	Iter= 0.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0120001
+BB1	Iter= 0.0000	 Time= 0.0109999
+ABBmin1	Iter= 1.0000	 Time= 0.0110002
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\crystm02.mat
+ME	Iter= 0.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0790000
+BB1	Iter= 0.0000	 Time= 0.0829999
+ABBmin1	Iter= 1.0000	 Time= 0.0850000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\fv1.mat
+ME	Iter= 26.0000 	 Time= 6.3050001
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0460000
+BB1	Iter= 0.0000	 Time= 0.0439999
+ABBmin1	Iter= 1.0000	 Time= 0.0400000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\fv2.mat
+ME	Iter= 24.0000 	 Time= 6.0590000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0430000
+BB1	Iter= 0.0000	 Time= 0.0450001
+ABBmin1	Iter= 1.0000	 Time= 0.0440001
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\lund_b.mat
+ME	Iter= 53244.0000 	 Time= 0.8279998
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mesh1e1.mat
+ME	Iter= 15.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mesh1em1.mat
+ME	Iter= 45.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mesh1em6.mat
+ME	Iter= 17.0000 	 Time= 0.0000000
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mesh3em5.mat
+ME	Iter= 14.0000 	 Time= 0.0009999
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mhd3200b.mat
+ME	Iter= 24729.0000 	 Time= 600.0220001
+RelaxME	 Iter= 9717.0000	 Time= 83.8209999
+MomME	 Iter= 32241.0000	 Time= 286.8580000
+CG	Iter= 10060.0000	 Time= 163.7869999
+DWGM	Iter= 1694.0000	 Time= 7.5720000
+BB1	Iter= 16960.0000	 Time= 73.8210001
+ABBmin1	Iter= 12958.0000	 Time= 5840.7570000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\mhd4800b.mat
+ME	Iter= 8977.0000 	 Time= 600.0019999
+RelaxME	 Iter= 16498.0000	 Time= 352.8069999
+MomME	 Iter= 40424.0000	 Time= 877.4580002
+CG	Iter= 11785.0000	 Time= 500.9190001
+DWGM	Iter= 1945.0000	 Time= 20.0390000
+BB1	Iter= 15804.0000	 Time= 163.3490000
+ABBmin1	Iter= 7473.0000	 Time= 76.6140001
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\nos4.mat
+ME	Iter= 1949.0000 	 Time= 0.0780001
+RelaxME	 Iter= 0.0000	 Time= 0.0000000
+MomME	 Iter= 0.0000	 Time= 0.0000000
+CG	Iter= 0.0000	 Time= 0.0000000
+DWGM	Iter= 1.0000	 Time= 0.0000000
+BB1	Iter= 0.0000	 Time= 0.0000000
+ABBmin1	Iter= 1.0000	 Time= 0.0000000
+
