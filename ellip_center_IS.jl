@@ -1,3 +1,6 @@
+
+include("gradient_ImgSmooth.jl")
+
 function ellip_center_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr::Int,tol::Real,omega::Real)
     
     gk = gradient_ImgSmooth(xk, y, lambda)

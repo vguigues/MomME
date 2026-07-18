@@ -6,12 +6,12 @@ include("util.jl")
 
 
 function conjugate_gradient(A::AbstractMatrix{Float64},
-	b::AbstractVector{Float64}, x::AbstractVector{Float64}, epsilon::Real)
+	b::AbstractVector{Float64}, x::AbstractVector{Float64}, epsilon::Real, mxitr::Int)
 	r = A * x - b
 	k = 0
 	start_time = time()
 	dp = zeros(eltype(x), size(x))
-	while norm(r, 2) > epsilon
+	while norm(r, 2) > epsilon && k < mxitr
 		if k == 0
 			d = r
 		else

@@ -1,8 +1,7 @@
 
 
-function [f] = fun_ImgSmooth(X::Matrix{Float64}, Y::Matrix{Float64}, lambda::Float64)
+function fun_ImgSmooth(X::Matrix{Float64}, Y::Matrix{Float64}, lambda::Float64)
    
-    sum_{i,j} (X[i,j] - Y[i,j])^2 + lambda * (sum_{i,j} (X[i,j] - X[i-1,j])^2 + sum_{i,j} (X[i,j] - X[i,j-1])^2)
 
     fidelity = 0.5*sum((X - Y).^2)
     

@@ -1,3 +1,6 @@
+
+include("gradient_ImgSmooth.jl")
+
 function BB1_IS( xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr::Int,tol::Real )
 
 t_ini = time()

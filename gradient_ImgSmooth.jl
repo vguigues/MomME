@@ -1,6 +1,6 @@
-function [g] = gradient_ImgSmooth(X::Matrix{Float64}, Y::Matrix{Float64}, lambda::Float64)
+function gradient_ImgSmooth(X::Matrix{Float64}, Y::Matrix{Float64}, lambda::Float64)
     
-    [n, m] = size(X)
+    n, m = size(X)
     LX = zeros(n, m)
 
     diff_v = X[2:end, :] - X[1:end-1, :]

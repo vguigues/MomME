@@ -1,3 +1,6 @@
+
+include("gradient_ImgSmooth.jl")
+
 function ABBmin1_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr::Int,tol::Real,m::Int )
 
 vecBB2 = zeros(mxitr)
@@ -25,7 +28,7 @@ while res > tol && k < mxitr
     vecBB2[k] = alphaBB2
     if alphaBB2 < kappa*alphaBB1
         if k <= m
-           lp = mininum( vecBB2[1:k] ) 
+           lp = minimum( vecBB2[1:k] ) 
         else
            lp = minimum( vecBB2[k-m:k] )
         end
@@ -39,6 +42,6 @@ while res > tol && k < mxitr
 end
 tf = time() - t_ini
 
-return x,tf, res, k-1
+return xk,tf, res, k-1
 
 end
