@@ -43,8 +43,8 @@ function ellip_center_with_momentum(A::Matrix, xk::Vector, b::Vector, mxitr::Int
 				counter = counter + 1
 				xtemp = (xk + yk) / 2
 				gtemp = 0.5*(gk + rk)
-				xk_EM = (1-omega)*xk + omega*xtemp
-				gk_EM = (1-omega)*gk + omega*gtemp
+				xk_EM = xtemp
+				gk_EM = gtemp
 				if (norm(A*x_k_EM - b) < tol)
 					break
 					nrmG=0

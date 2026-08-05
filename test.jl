@@ -72,7 +72,7 @@ function run_solvers_random_convex(n, ncond, Nc)
 		x, elapsed, optimal_value, k = barzilai_borwein(A, b, tol, x0, true, mxitr)
 		vec6[1] += k
 		vec6[2] += elapsed
-		vec6[3] += optimal_value
+		vec6[3] += norm(b-A*x)
 
 		x0=copy(xout)
 		m = 9
@@ -152,7 +152,7 @@ function run_solvers_experiment_2(n, Nc)
 		x, elapsed, optimal_value, k = barzilai_borwein(A, b, tol, x0, true,mxitr)
 		vec6[1] += k
 		vec6[2] += elapsed
-		vec6[3] += optimal_value
+		vec6[3] += norm(b-A*x)
 
 		x0=copy(xout)
 		m = 9
@@ -323,55 +323,51 @@ function test_experiment_4()
 	pasta = "C:\\Users\\vince\\Dropbox\\Softwares\\Relaxed_ME\\MATLAB\\Experiments\\images"
 	for arquivo in readdir(pasta, join = true)
 		if endswith(arquivo, ".tiff")
+			myString=split(arquivo,".")[1]
 			img = load(arquivo)
-			imshow(img)
+
 			gray = Gray.(img)
 			y = Float64.(gray)
+            save(myString*"_gray.tiff", y)
+		
 			n, m = size(y)
 			x0 = copy(y)
-			lambda = 1.0
+			lambda = 100.0
 			mxitr = 500000
 			tol   = 1e-7
 			println("Arquivo: $arquivo")
 			
 			xk, tf, nrmG, k = BB1_IS(x0, y, lambda, mxitr, tol)
 			write(f, "Arquivo: $arquivo\n")
-           
 			write(f, "BB1_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
-			myString=split(arquivo,".")[1]
             save(myString*"_BB1_IS.tiff", xk)
-            imshow(xk)
 			
 			x0 = copy(y)
 			xk, tf, nrmG, k = MEM_IS(x0,y,lambda,mxitr,tol)
 			write(f, "MEM_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
 			save(myString*"_MEM_IS.tiff", xk)
-			imshow(xk)
 
             x0 = copy(y)
 			xk, tf, nrmG, k = ABBmin1_IS(x0,y,lambda,mxitr,tol,9)
 			write(f, "ABBmin1_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
             save(myString*"_ABBmin1_IS.tiff", xk)
-			imshow(xk)         
 
 			x0 = copy(y)
 			omega=0.9
-            xk, tf, nrmG, k = ellip_center_IS(xk,y,lambda,mxitr,tol,omega)
+            xk, tf, nrmG, k = ellip_center_IS(x0,y,lambda,mxitr,tol,omega)
 			write(f, "ellip_center_Relaxed\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
             save(myString*"_ellip_center_Relaxed.tiff", xk)
-			imshow(xk)
 
 			x0 = copy(y)
 			omega=1
-            xk, tf, nrmG, k = ellip_center_IS(xk,y,lambda,mxitr,tol,omega)
+            xk, tf, nrmG, k = ellip_center_IS(x0,y,lambda,mxitr,tol,omega)
 			write(f, "ellip_center_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
             save(myString*"_ellip_center_IS.tiff", xk)
-			imshow(xk)
 
 			flush(f)
 		end
@@ -380,15 +376,15 @@ end
 
 function test()
 
-	dim   = [1000, 2500, 5000]
-	kappa = [3.0, 6.0, 9.0, 12.0]
-	Nc = 1
-	# test_random_convex(dim, kappa, Nc)
+	# dim   = [1000, 2500, 5000]
+	# kappa = [3.0, 6.0, 9.0, 12.0]
+	# Nc = 1
+	# # test_random_convex(dim, kappa, Nc)
 
-	ns=[100, 200, 300, 400, 500, 600]
-	test_experiment_2(ns, Nc)
+	# ns=[100, 200, 300, 400, 500, 600]
+	# test_experiment_2(ns, Nc)
 
-	test_experiment_3(Nc)
+	# test_experiment_3(Nc)
 
 	test_experiment_4()
 
