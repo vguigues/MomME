@@ -11,6 +11,10 @@ include("ABBmin1_IS.jl")
 include("DWGM.jl")
 include("BB1.jl")
 include("ABBmin1.jl")
+include("CG_IS.jl")
+
+using LinearAlgebra
+
 
 using ImageView
 using MAT
@@ -318,58 +322,178 @@ function test_experiment_3(Nc)
 	end
 end
 
-function test_experiment_4()
-	f=open("experiment_4.txt", "w")
+
+function test_experiment_4(lambda::Float64)
+	f=open("experiment_4_$lambda.txt", "w")
 	pasta = "C:\\Users\\vince\\Dropbox\\Softwares\\Relaxed_ME\\MATLAB\\Experiments\\images"
 	for arquivo in readdir(pasta, join = true)
 		if endswith(arquivo, ".tiff")
 			myString=split(arquivo,".")[1]
 			img = load(arquivo)
-
+            base_folder = dirname(arquivo)
+            filename, ext = splitext(basename(arquivo))
+			 
 			gray = Gray.(img)
 			y = Float64.(gray)
-            save(myString*"_gray.tiff", y)
-		
 			n, m = size(y)
 			x0 = copy(y)
-			lambda = 100.0
+            save(base_folder*"\\output\\"*filename*"_gray.tiff", x0)
+
 			mxitr = 500000
 			tol   = 1e-7
 			println("Arquivo: $arquivo")
-			
 			xk, tf, nrmG, k = BB1_IS(x0, y, lambda, mxitr, tol)
 			write(f, "Arquivo: $arquivo\n")
 			write(f, "BB1_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
-            save(myString*"_BB1_IS.tiff", xk)
-			
+ 
+		    println("Saving image: ",base_folder*"\\output\\"*filename*"_BB1_IS_lam$lambda.tiff" )
+			save(base_folder*"\\output\\"*filename*"_BB1_IS_lam$lambda.tiff", xk)
+            # imshow(xk)
 			x0 = copy(y)
 			xk, tf, nrmG, k = MEM_IS(x0,y,lambda,mxitr,tol)
 			write(f, "MEM_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
-			save(myString*"_MEM_IS.tiff", xk)
-
+			save(base_folder*"\\output\\"*filename*"_MEM_IS_lam$lambda.tiff", xk)
+			# imshow(xk)
+ 
             x0 = copy(y)
 			xk, tf, nrmG, k = ABBmin1_IS(x0,y,lambda,mxitr,tol,9)
 			write(f, "ABBmin1_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
-			write(f, "\n")
-            save(myString*"_ABBmin1_IS.tiff", xk)
-
+			println("Saving image: ",base_folder*"\\output\\"*filename*"_ABBmin1_IS_lam$lambda.tiff" )
+			save(base_folder*"\\output\\"*filename*"_ABBmin1_IS_lam$lambda.tiff", xk)
+			# imshow(xk)         
+ 
 			x0 = copy(y)
 			omega=0.9
             xk, tf, nrmG, k = ellip_center_IS(x0,y,lambda,mxitr,tol,omega)
 			write(f, "ellip_center_Relaxed\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
-            save(myString*"_ellip_center_Relaxed.tiff", xk)
-
+            save(base_folder*"\\output\\"*filename*"_ellip_center_Relaxed_lam$lambda.tiff", xk)
+			# imshow(xk)
+ 
 			x0 = copy(y)
 			omega=1
             xk, tf, nrmG, k = ellip_center_IS(x0,y,lambda,mxitr,tol,omega)
 			write(f, "ellip_center_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
 			write(f, "\n")
-            save(myString*"_ellip_center_IS.tiff", xk)
-
+            save(base_folder*"\\output\\"*filename*"_ellip_center_IS_lam$lambda.tiff", xk)
+			# imshow(xk)
+            
+            x0 = copy(y)
+			xk, tf, nrmG, k = CG_IS(x0,y,lambda,mxitr,tol)
+			write(f, "CG_IS\tIter= $(@sprintf("%.4f", k)) \t Time= $(@sprintf("%.7f", tf))\t NrmG= $(@sprintf("%.4f", nrmG))\n")
+			write(f, "\n")
+            save(base_folder*"\\output\\"*filename*"_CG_IS_lam$lambda.tiff", xk)
+        
 			flush(f)
+		end
+	end
+end
+
+	function run_solvers_experiment_5(n, Nc)
+		# mxitr = 500000
+		mxitr=100
+		tol   = 1e-7
+		vec1  = zeros(3)
+		vec2  = zeros(3)
+		vec3  = zeros(3)
+		vec4  = zeros(3)
+		vec5  = zeros(3)
+		vec6  = zeros(3)
+		vec7  = zeros(3)
+
+		for i in 1:Nc
+
+
+			vec = zeros(n)
+			for j in 1:floor(Int,n/2)
+				vec[j] = 1.0
+			end
+
+			for j in floor(Int,n/2)+1:n
+				vec[j] = 2.0
+			end
+
+			AuxMat=rand(n,n)
+            Paux=qr(AuxMat)
+			P=Paux.Q
+			A = P*Diagonal(vec)*P'
+	        b=-A*ones(n)
+
+			println("Running solvers for n = $n, iteration = $i")
+			
+			xout=rand(n)
+			x0=copy(xout)
+
+			x, elapsed, optimal_value, nrmG,k = ellip_center!(A, b, tol, x0, mxitr)
+			vec1[1] += k
+			vec1[2]+=elapsed
+			vec1[3]+=nrmG
+
+			x0=copy(xout)
+			omega = 0.9
+			xk, elapsed,  nrmG, k, opt_val = relaxed_ellip_center(A, x0, b, mxitr, tol, omega)
+			vec2[1] += k
+			vec2[2] += elapsed
+			vec2[3] += nrmG
+
+			x0=copy(xout)
+			xk, k, elapsed, nrmG, opt_val = ellip_center_with_momentum(A, x0, b, mxitr, tol)
+			vec3[1] += k
+			vec3[2] += elapsed
+			vec3[3] += nrmG
+
+			x0=copy(xout)
+			x, elapsed, optimal_value, k = conjugate_gradient(A, b, x0, tol, mxitr)
+			vec4[1] += k
+			vec4[2] += elapsed
+			vec4[3] += norm(b-A*x)
+
+			x0=copy(xout)
+			xk, k, tf, res = DWGM(A, x0, b, mxitr, tol)
+			vec5[1] += k
+			vec5[2] += tf
+			vec5[3] += res
+
+			x0=copy(xout)
+			x, elapsed, optimal_value, k = barzilai_borwein(A, b, tol, x0, true, mxitr)
+			vec6[1] += k
+			vec6[2] += elapsed
+			vec6[3] += norm(b-A*x)
+
+			x0=copy(xout)
+			m = 9
+			xk, k, tf, res = ABBmin1(A, x0, b, mxitr, tol, m)
+			vec7[1] += k
+			vec7[2] += tf
+			vec7[3] += res
+
+		end
+		vec1./=Nc
+		vec2./=Nc
+		vec3./=Nc
+		vec4./=Nc
+		vec5./=Nc
+		vec6./=Nc
+		vec7./=Nc
+		return vec1, vec2, vec3, vec4, vec5, vec6, vec7
+end
+
+
+function test_experiment_5(ns,Nc)
+        open("experiment_5.txt", "w") do f
+		for i ∈ 1:length(ns)
+			n = ns[i]
+			vec1, vec2, vec3, vec4, vec5, vec6, vec7 = run_solvers_experiment_5(n, Nc)
+			write(f, "n = $n\n")
+			write(f, "ME\tIter= $(@sprintf("%.4f", vec1[1])) \t Time= $(@sprintf("%.7f", vec1[2]))\t NrmG= $(@sprintf("%.4f", vec1[3]))\n")
+			write(f, "REM\t Iter= $(@sprintf("%.4f", vec2[1]))\t Time= $(@sprintf("%.7f", vec2[2]))\t NrmG= $(@sprintf("%.4f", vec2[3]))\n")
+			write(f, "MEM\t Iter= $(@sprintf("%.4f", vec3[1]))\t Time= $(@sprintf("%.7f", vec3[2]))\t NrmG= $(@sprintf("%.4f", vec3[3]))\n")
+			write(f, "CG\tIter= $(@sprintf("%.4f", vec4[1]))\t Time= $(@sprintf("%.7f", vec4[2]))\t NrmG= $(@sprintf("%.4f", vec4[3]))\n")
+			write(f, "DWGM\tIter= $(@sprintf("%.4f", vec5[1]))\t Time= $(@sprintf("%.7f", vec5[2]))\t NrmG= $(@sprintf("%.4f", vec5[3]))\n")
+			write(f, "BB1\tIter= $(@sprintf("%.4f", vec6[1]))\t Time= $(@sprintf("%.7f", vec6[2]))\t NrmG= $(@sprintf("%.4f", vec6[3]))\n")
+			write(f, "ABBmin1\tIter= $(@sprintf("%.4f", vec7[1]))\t Time= $(@sprintf("%.7f", vec7[2]))\t NrmG= $(@sprintf("%.4f", vec7[3]))\n")
 		end
 	end
 end
@@ -378,16 +502,19 @@ function test()
 
 	# dim   = [1000, 2500, 5000]
 	# kappa = [3.0, 6.0, 9.0, 12.0]
-	# Nc = 1
+	Nc = 1
 	# # test_random_convex(dim, kappa, Nc)
-
-	# ns=[100, 200, 300, 400, 500, 600]
+    lambda=1.0
+	ns=[100,1000,5000,10000]
 	# test_experiment_2(ns, Nc)
 
 	# test_experiment_3(Nc)
 
-	test_experiment_4()
+	
+	#  test_experiment_4(lambda)
 
+
+	test_experiment_5(ns,Nc)
 end
 
 test()

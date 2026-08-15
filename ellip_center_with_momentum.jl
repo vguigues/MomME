@@ -1,20 +1,24 @@
 
 include("util.jl")
 
-function ellip_center_with_momentum(A::Matrix, xk::Vector, b::Vector, mxitr::Int, tol::Float64)
-	# % ELLIP_CENTER Implementación del método de optimización en MATLAB
-	# % Traducido de Julia.
+function ellip_center_with_momentum(A::AbstractMatrix, xk::Vector, b::Vector, mxitr::Int, tol::Float64)
+
+
 
 	gk = A*xk - b
-	start_time = time();
+	start_time = time()
 	k = 0
+	tol_ME=1e-7
 	nrmG = norm(gk)
-	xold = xk
-	gold = gk
-	counter = 0
-	while nrmG > tol 
-		xk_prev = xk
-		gk_prev = gk
+    nrmT=nrmG
+    xtemp=zeros(size(xk))
+    gtemp=zeros(size(xk)) 
+    xprev=zeros(size(xk))
+    gprev=zeros(size(xk)) 
+
+
+
+	while nrmG > tol && nrmT>tol
 		wk = A*gk
 		gtw = gk'*wk
 		ng2 = nrmG^2
@@ -24,52 +28,56 @@ function ellip_center_with_momentum(A::Matrix, xk::Vector, b::Vector, mxitr::Int
 		nrmR = norm(rk)
 
 		if nrmR > tol
-			Awk  = A*wk
-			Ark  = wk - tk*Awk
-			rtAr = rk'*Ark
-			gtAr = gk'*Ark
-
-			delta = rtAr*gtw - gtAr^2
-			if abs(delta) > 0
+			# if abs(nrmR-nrmG)<tol_ME
+		    if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR))
+				println("Entering the LD case, iteration $(k+1)") 
+				xtemp = (xk + yk) / 2
+                nrmT=norm(xtemp)
+				nrmG=norm(xtemp)
+				xk=xtemp
+				break
+			else
+     			Awk  = A*wk
+				Ark  = wk - tk*Awk
+				rtAr = rk'*Ark
+				gtAr = gk'*Ark
+				delta = rtAr*gtw - gtAr^2
 				rtg = rk'*gk
-
 				alpha = (rtg*gtAr - ng2*rtAr)/delta
 				beta  = (-rtg*gtw + ng2*gtAr)/delta
-
-				xk_EM = xk + alpha*gk + beta*rk
-				gk_EM = gk + alpha*wk + beta*Ark
-
-			else
-				counter = counter + 1
-				xtemp = (xk + yk) / 2
-				gtemp = 0.5*(gk + rk)
-				xk_EM = xtemp
-				gk_EM = gtemp
-				if (norm(A*x_k_EM - b) < tol)
-					break
-					nrmG=0
-				end
+				xtemp=xk+alpha*gk + beta*rk
+				nrmT=norm(xtemp)
+				gtemp=A*xtemp-b
 			end
+			if k==0
+			   xprev.=xk 
+			   gprev.=gk	
+			   xk.=xtemp
+               gk.=gtemp
+			else
+				xaux=copy(xk) 
+				gaux=copy(gk)
+				sk=xtemp-xprev
+				gsk = gtemp-gprev 
+				mu = (sk'*gtemp)/(sk'*gsk)
+				xk = (1-mu)*xtemp+mu*xprev
+				gk = (1-mu)*gtemp+mu*gprev
+				xprev.=xaux
+				gprev.=gaux
+			end	
 		else
-			xk = yk
+			xk .= yk
 			nrmG = nrmR
+			k=k+1
 			break
 		end
-
-		sk = xold - xk_EM
-		gsk = gold - gk_EM
-		mu = -(sk'*gk_EM)/(sk'*gsk)
-		xk = xk_EM + mu*sk
-		gk = gk_EM + mu*gsk
-
 		nrmG = norm(gk)
-		xold = xk_prev
-		gold = gk_prev
 		k = k + 1
-		if k > mxitr
-			break;
+		if k >= mxitr
+			break
 		end
 	end
+
 	elapsed = time() - start_time
 
 	return xk, k, elapsed, nrmG, f(xk, A, b)

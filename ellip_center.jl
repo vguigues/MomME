@@ -2,47 +2,61 @@
 
 include("util.jl")
 
-function ellip_center!(A::AbstractMatrix{Float64}, b::AbstractVector{Float64}, epsilon::Real, x::AbstractVector{Float64}, kmax::Int)
+function ellip_center!(A::AbstractMatrix,b::Vector,tol::Float64,xk::Vector,mxitr::Int)
 
-	d = b - A * x
+	gk = A*xk - b
 	start_time = time()
-	k=0
-	while norm(d, 2) > epsilon && (k < kmax)
-		step = 2 * (d' * d) / (d' * A * d)
-		y = x + step * d
-		da = b - A * y
-		if (norm(da, 2)>0)
-			step = 2 * (da' * da) / (da' * A * da)
-			z = y + step * da
-			v = z - y
-			u = y - x
-			aux=A*v
-			aux1 = v' * aux
-			aux2 = u' * A * u
-			aux3 = u' * aux
-			aux4 = u' * d
-			aux5 = v' * d
-			num = aux3 * aux5 - aux1 * aux4
-			denom = (aux3^2) - aux1 * aux2
-			if (denom != 0)
-				alpha = num / denom
-				num = aux3 * aux4 - aux2 * aux5
-				beta = num / denom
-				x .= (1 - alpha) * x + (alpha - beta) * y + beta * z
+	k = 0
+	tol_ME=1e-7
+	nrmG = norm(gk)
+    gtemp=zeros(size(xk)) 
+
+	while nrmG > tol
+		wk = A*gk
+		gtw = gk'*wk
+		ng2 = nrmG^2
+		tk = 2*(ng2/gtw)
+		yk = xk - tk*gk
+		rk = gk - tk*wk
+		nrmR = norm(rk)
+
+		if nrmR > tol
+            if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR))
+			# if abs(nrmR-nrmG)<tol_ME 
+                println("Entering the LD case, iteration $(k+1)")
+				xk = (xk + yk) / 2
+                # nrmG=0
+				nrmG=norm(xk)
+				k=k+1
+                break
 			else
-				x=(x+y)/2
-			end
+     			Awk  = A*wk
+				Ark  = wk - tk*Awk
+				rtAr = rk'*Ark
+				gtAr = gk'*Ark
+				delta = rtAr*gtw - gtAr^2
+				rtg = rk'*gk
+				alpha = (rtg*gtAr - ng2*rtAr)/delta
+				beta  = (-rtg*gtw + ng2*gtAr)/delta
+				xk=xk+alpha*gk + beta*rk
+				gk=A*xk-b
+			end	
 		else
-			x=y
+			xk = yk
+			nrmG = nrmR
+			k=k+1
+			break
 		end
-		d .= b - A * x
-		k+=1
-		elapsed = time() - start_time
-		if elapsed > 600
+		nrmG = norm(gk)
+		k = k + 1
+		if k >= mxitr
 			break
 		end
 	end
+
 	elapsed = time() - start_time
-	optimal_value = f(x, A, b)
-	return x, elapsed, optimal_value, k
+
+	return xk, elapsed,f(xk, A, b), nrmG, k
 end
+
+

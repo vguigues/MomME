@@ -1,4 +1,4 @@
-function DWGM(A::Matrix, x::Vector, b::Vector, mxitr::Int, tol::Float64)
+function DWGM(A::AbstractMatrix, x::Vector, b::Vector, mxitr::Int, tol::Float64)
 	# // % This function corresponds to an implementation of the Delayed 
 	# // % Weighted Gradient Method proposed in .
 

@@ -1,14 +1,18 @@
 
 include("util.jl")
 
-function relaxed_ellip_center(A::Matrix, xk::Vector, b::Vector, mxitr::Int, tol::Float64, omega::Float64)
+function relaxed_ellip_center(A::AbstractMatrix, xk::Vector, b::Vector, mxitr::Int, tol::Float64, omega::Float64)
 
 	gk = A*xk - b
 	start_time = time()
 	k = 0
+	tol_ME=1e-7
 	nrmG = norm(gk)
-	counter = 0
-	while nrmG > tol
+    nrmT=nrmG
+	xtemp=zeros(size(xk))
+    gtemp=zeros(size(xk)) 
+
+	while nrmG > tol 
 		wk = A*gk
 		gtw = gk'*wk
 		ng2 = nrmG^2
@@ -17,39 +21,44 @@ function relaxed_ellip_center(A::Matrix, xk::Vector, b::Vector, mxitr::Int, tol:
 		rk = gk - tk*wk
 		nrmR = norm(rk)
 
-		if nrmR > tol
-			Awk  = A*wk
-			Ark  = wk - tk*Awk
-			rtAr = rk'*Ark;
-			gtAr = gk'*Ark;
-
-			delta = rtAr*gtw - gtAr^2;
-			if abs(delta) > 0
-				rtg = rk'*gk;
-
+		if nrmR > tol 
+			if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR))
+			# if abs(nrmR-nrmG)<tol_ME
+				println("Entering the LD case, iteration $(k+1)") 
+				xtemp = (xk + yk) / 2
+				nrmT=norm(xtemp)
+				nrmG=norm(xtemp)
+				xk=xtemp
+				break
+			else
+     			Awk  = A*wk
+				Ark  = wk - tk*Awk
+				rtAr = rk'*Ark
+				gtAr = gk'*Ark
+				delta = rtAr*gtw - gtAr^2
+				rtg = rk'*gk
 				alpha = (rtg*gtAr - ng2*rtAr)/delta
 				beta  = (-rtg*gtw + ng2*gtAr)/delta
-
-				xk = xk + (omega*alpha)*gk + (omega*beta)*rk
-				gk = gk + (omega*alpha)*wk + (omega*beta)*Ark
-
-
+				xtemp=xk+alpha*gk + beta*rk
+				gtemp=A*xtemp-b
+				nrmT=norm(xtemp)
+			end	
+			if k==0
+			   xk=xtemp
+               gk=gtemp
 			else
-				counter = counter + 1
-				xtemp = (xk + yk) / 2
-				gtemp = 0.5*(gk + rk)
-				xk = (1-omega)*xk + omega*xtemp
-				gk = (1-omega)*gk + omega*gtemp
-			end
+               xk = (1-omega)*xk + omega*xtemp
+			   gk = (1-omega)*gk + omega*gtemp
+			end	
 		else
 			xk = yk
 			nrmG = nrmR
+			k=k+1
 			break
 		end
 		nrmG = norm(gk)
 		k = k + 1
-
-		if k > mxitr
+		if k >= mxitr
 			break
 		end
 	end
