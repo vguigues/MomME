@@ -502,10 +502,10 @@ function test()
 
 	# dim   = [1000, 2500, 5000]
 	# kappa = [3.0, 6.0, 9.0, 12.0]
-	Nc = 1
+	Nc = 5
 	# # test_random_convex(dim, kappa, Nc)
     lambda=1.0
-	ns=[100,1000,5000,10000]
+	ns=[1000,5000,10000,20000]
 	# test_experiment_2(ns, Nc)
 
 	# test_experiment_3(Nc)

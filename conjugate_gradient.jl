@@ -29,5 +29,5 @@ while sqrt(nrmR) > tol && k < mxitr
 end
 elapsed = time() - start_time
 optimal_value = f(x, A, b)
-return x, elapsed, optimal_value, k
+return x, elapsed, optimal_value, k-1
 end

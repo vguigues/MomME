@@ -8,7 +8,6 @@ function relaxed_ellip_center(A::AbstractMatrix, xk::Vector, b::Vector, mxitr::I
 	k = 0
 	tol_ME=1e-7
 	nrmG = norm(gk)
-    nrmT=nrmG
 	xtemp=zeros(size(xk))
     gtemp=zeros(size(xk)) 
 
@@ -23,11 +22,10 @@ function relaxed_ellip_center(A::AbstractMatrix, xk::Vector, b::Vector, mxitr::I
 
 		if nrmR > tol 
 			if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR))
-			# if abs(nrmR-nrmG)<tol_ME
 				println("Entering the LD case, iteration $(k+1)") 
 				xtemp = (xk + yk) / 2
-				nrmT=norm(xtemp)
-				nrmG=norm(xtemp)
+				gtemp=A*xtemp-b
+				nrmG=norm(gtemp)
 				xk=xtemp
 				break
 			else
@@ -41,7 +39,6 @@ function relaxed_ellip_center(A::AbstractMatrix, xk::Vector, b::Vector, mxitr::I
 				beta  = (-rtg*gtw + ng2*gtAr)/delta
 				xtemp=xk+alpha*gk + beta*rk
 				gtemp=A*xtemp-b
-				nrmT=norm(xtemp)
 			end	
 			if k==0
 			   xk=xtemp
