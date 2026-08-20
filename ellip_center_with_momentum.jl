@@ -27,11 +27,10 @@ function ellip_center_with_momentum(A::AbstractMatrix, xk::Vector, b::Vector, mx
 		nrmR = norm(rk)
 
 		if nrmR > tol
-			# if abs(nrmR-nrmG)<tol_ME
-		    if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR))
+		    if abs(nrmR-nrmG)<tol_ME*max(1,nrmR)
 				println("Entering the LD case, iteration $(k+1)") 
 				xtemp = (xk + yk) / 2
-                gtemp=A*xtemp-b
+                gtemp=(gk+rk)/2
 				nrmG=norm(gtemp)
 				xk=xtemp
 				break
@@ -45,7 +44,7 @@ function ellip_center_with_momentum(A::AbstractMatrix, xk::Vector, b::Vector, mx
 				alpha = (rtg*gtAr - ng2*rtAr)/delta
 				beta  = (-rtg*gtw + ng2*gtAr)/delta
 				xtemp=xk+alpha*gk + beta*rk
-				gtemp=A*xtemp-b
+				gtemp=gk+alpha*wk+beta*Ark
 			end
 			if k==0
 			   xprev.=xk 

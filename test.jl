@@ -336,6 +336,7 @@ function test_experiment_4(lambda::Float64)
 			gray = Gray.(img)
 			y = Float64.(gray)
 			n, m = size(y)
+			println("n: $(n), m: $(m)")
 			x0 = copy(y)
             save(base_folder*"\\output\\"*filename*"_gray.tiff", x0)
 
@@ -505,16 +506,16 @@ function test()
 	Nc = 5
 	# # test_random_convex(dim, kappa, Nc)
     lambda=1.0
-	ns=[1000,5000,10000,20000]
+	# ns=[1000,5000,10000,20000]
 	# test_experiment_2(ns, Nc)
 
 	# test_experiment_3(Nc)
 
 	
-	#  test_experiment_4(lambda)
+	test_experiment_4(lambda)
 
 
-	test_experiment_5(ns,Nc)
+	# test_experiment_5(ns,Nc)
 end
 
 test()

@@ -9,11 +9,14 @@ function MEM_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr::Int,tol
     start_time = time()
     k = 0
     nrmG = norm(gk)
-    xold = xk  
-    gold = gk
+    tol_ME=1e-7
+    xtemp=zeros(size(xk))
+    gtemp=zeros(size(xk)) 
+    xprev=zeros(size(xk))
+    gprev=zeros(size(xk)) 
+
+
     while nrmG > tol
-        xk_prev = xk           
-        gk_prev = gk
         wk = gradient_ImgSmooth(gk, y, lambda) + y
         gtw = sum(gk.*wk)  
         ng2 = nrmG^2
@@ -23,40 +26,52 @@ function MEM_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr::Int,tol
         nrmR = norm(rk)
 
         if nrmR > tol
-            Awk  = gradient_ImgSmooth(wk, y, lambda) + y        
-            Ark = wk - tk*Awk      
-            rtAr = sum(rk.*Ark)     
-            gtAr = sum(gk.*Ark)
+           if abs(nrmR-nrmG)<tol_ME*max(1,abs(nrmR)) 
+                xtemp = (xk + yk) / 2
+                gtemp = 0.5*(gk + rk)
+                nrmG=norm(gtemp)
+                xk=xtemp
+                k=k+1
+                break
+           else 
+                Awk  = gradient_ImgSmooth(wk, y, lambda) + y        
+                Ark = wk - tk*Awk      
+                rtAr = sum(rk.*Ark)     
+                gtAr = sum(gk.*Ark)
 
-            delta  = rtAr*gtw - gtAr^2 
-            if abs(delta) > 0 
+                delta  = rtAr*gtw - gtAr^2 
+        
                 rtg = sum(rk.*gk)   
-
                 alpha = (rtg*gtAr - ng2*rtAr)/delta
                 beta  = (-rtg*gtw + ng2*gtAr)/delta
+				xtemp=xk+alpha*gk + beta*rk
+				gtemp=gk+alpha*wk+beta*Ark
+            end 
 
-                xk_EM = xk + alpha*gk + beta*rk
-                gk_EM = gk + alpha*wk + beta*Ark
+            if k==0
+			   xprev.=xk 
+			   gprev.=gk	
+			   xk.=xtemp
+               gk.=gtemp
+			else
+				xaux=copy(xk) 
+				gaux=copy(gk)
+				sk=xtemp-xprev
+				gsk = gtemp-gprev 
+				mu = (sum(sk.*gtemp))/(sum(sk.*gsk))
+				xk = (1-mu)*xtemp+mu*xprev
+				gk = (1-mu)*gtemp+mu*gprev
+				xprev.=xaux
+				gprev.=gaux
+			end	
 
-            else
-                xk_EM = (xk + yk) / 2
-                gk_EM = 0.5*(gk + rk)
-            end
         else
             xk = yk    
             nrmG = nrmR
+            k=k+1
             break
         end
 
-        sk = xold - xk_EM                  
-        gsk = gold - gk_EM 
-        mu = -sum(sk.*gk_EM)/sum(sk.*gsk)
-        xk = xk_EM + mu*sk
-        gk = gk_EM + mu*gsk
-        
-
-        xold = xk_prev  
-        gold = gk_prev        
         nrmG = norm(gk)
         k = k + 1
 

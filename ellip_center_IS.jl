@@ -26,6 +26,7 @@ function ellip_center_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr
                 gtemp = 0.5*(gk + rk)
                 nrmG=norm(gtemp)
                 xk=xtemp
+                k=k+1
                 break
            else 
                 Awk  = gradient_ImgSmooth(wk, y, lambda) + y        
@@ -39,7 +40,7 @@ function ellip_center_IS(xk::AbstractMatrix,y::AbstractMatrix,lambda::Real,mxitr
                 alpha = (rtg*gtAr - ng2*rtAr)/delta
                 beta  = (-rtg*gtw + ng2*gtAr)/delta
 				xtemp=xk+alpha*gk + beta*rk
-				gtemp=A*xtemp-b
+				gtemp=gk+alpha*wk+beta*Ark
             end 
             if k==0
 			   xk=xtemp
