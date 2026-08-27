@@ -501,21 +501,21 @@ end
 
 function test()
 
-	# dim   = [1000, 2500, 5000]
-	# kappa = [3.0, 6.0, 9.0, 12.0]
-	Nc = 5
-	# # test_random_convex(dim, kappa, Nc)
-    lambda=1.0
-	# ns=[1000,5000,10000,20000]
-	# test_experiment_2(ns, Nc)
+	dim   = [1000, 2500, 5000]
+	kappa = [3.0, 6.0, 9.0, 12.0]
+	Nc = 10
+	test_random_convex(dim, kappa, Nc)
+    lambda=100.0
+	ns=[100,200,300,400,500,600]
+	test_experiment_2(ns, Nc)
 
-	# test_experiment_3(Nc)
+	test_experiment_3(Nc)
 
 	
 	test_experiment_4(lambda)
 
 
-	# test_experiment_5(ns,Nc)
+	test_experiment_5(ns,Nc)
 end
 
 test()

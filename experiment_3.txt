@@ -1,81 +1,255 @@
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Kuu.mat
-ME	Iter= 2180.0000 	 Time= 2410.0300002	 NrmG= 0.1706
-RelaxME	 Iter= 1007.0000	 Time= 650.0999999	 NrmG= 0.0000
-MomME	 Iter= 422.0000	 Time= 24.5070000	 NrmG= 0.0000
-CG	Iter= 715.0000	 Time= 67.2849998	 NrmG= 0.0000
-DWGM	Iter= 663.0000	 Time= 15.7249999	 NrmG= 0.0000
-BB1	Iter= 1474.0000	 Time= 34.8840001	 NrmG= 0.0000
-ABBmin1	Iter= 1179.0000	 Time= 27.7839999	 NrmG= 0.0000
+Arquivo: Matrices/mhd4800b.mat
+ME	Iter= 500000.0000 	 Time= 11668.4923408	 NrmG= 0.0000
+RelaxME	 Iter= 971.0000	 Time= 15.9464792	 NrmG= 0.0000
+MomME	 Iter= 22479.0000	 Time= 357.5722142	 NrmG= 0.0000
+CG	Iter= 6743.0000	 Time= 55.1318183	 NrmG= 0.0000
+DWGM	Iter= 2291.0000	 Time= 18.0883120	 NrmG= 0.0000
+BB1	Iter= 13745.0000	 Time= 212.1669788	 NrmG= 0.0000
+ABBmin1	Iter= 9816.0000	 Time= 78.6274421	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\LF10.mat
-ME	Iter= 500000.0000 	 Time= 1.4789999	 NrmG= 0.1070
-RelaxME	 Iter= 15610.0000	 Time= 0.0230000	 NrmG= 0.0000
-MomME	 Iter= 613.0000	 Time= 0.0039999	 NrmG= 0.0000
-CG	Iter= 58.0000	 Time= 0.0000000	 NrmG= 0.0000
-DWGM	Iter= 52.0000	 Time= 0.0000000	 NrmG= 0.0000
-BB1	Iter= 56469.0000	 Time= 0.0320001	 NrmG= 0.0000
-ABBmin1	Iter= 2911.0000	 Time= 0.0020001	 NrmG= 0.0000
+Arquivo: Matrices/nos4.mat
+ME	Iter= 1887.0000 	 Time= 0.0106610	 NrmG= 0.0000
+RelaxME	 Iter= 154.0000	 Time= 0.0014792	 NrmG= 0.0000
+MomME	 Iter= 64.0000	 Time= 0.0004834	 NrmG= 0.0000
+CG	Iter= 79.0000	 Time= 0.0002374	 NrmG= 0.0000
+DWGM	Iter= 80.0000	 Time= 0.0012812	 NrmG= 0.0000
+BB1	Iter= 527.0000	 Time= 0.0018996	 NrmG= 0.0000
+ABBmin1	Iter= 161.0000	 Time= 0.0003997	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Muu.mat
-ME	Iter= 43.0000 	 Time= 5.9749999	 NrmG= 0.0000
-RelaxME	 Iter= 19.0000	 Time= 0.9890001	 NrmG= 0.0000
-MomME	 Iter= 16.0000	 Time= 0.7509999	 NrmG= 0.0000
-CG	Iter= 32.0000	 Time= 2.8720000	 NrmG= 0.0000
-DWGM	Iter= 31.0000	 Time= 1.2640002	 NrmG= 0.0000
-BB1	Iter= 39.0000	 Time= 0.9529998	 NrmG= 0.0000
-ABBmin1	Iter= 37.0000	 Time= 0.8880000	 NrmG= 0.0000
+Arquivo: Matrices/plat362.mat
+ME	Iter= 500000.0000 	 Time= 33.1807635	 NrmG= 0.0000
+RelaxME	 Iter= 1178.0000	 Time= 0.0740119	 NrmG= 0.0000
+MomME	 Iter= 1848.0000	 Time= 0.1181252	 NrmG= 0.0000
+CG	Iter= 612.0000	 Time= 0.0171572	 NrmG= 0.0000
+DWGM	Iter= 465.0000	 Time= 0.0151906	 NrmG= 0.0000
+BB1	Iter= 7680.0000	 Time= 0.3378808	 NrmG= 0.0000
+ABBmin1	Iter= 4545.0000	 Time= 0.1108690	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_150.mat
-ME	Iter= 1630.0000 	 Time= 0.0580001	 NrmG= 0.0000
-RelaxME	 Iter= 215.0000	 Time= 0.0019999	 NrmG= 0.0000
-MomME	 Iter= 85.0000	 Time= 0.0010002	 NrmG= 0.0000
-CG	Iter= 115.0000	 Time= 0.0030000	 NrmG= 0.0000
-DWGM	Iter= 115.0000	 Time= 0.0009999	 NrmG= 0.0000
-BB1	Iter= 403.0000	 Time= 0.0049999	 NrmG= 0.0000
-ABBmin1	Iter= 294.0000	 Time= 0.0019999	 NrmG= 0.0000
+Arquivo: Matrices/t2dal_e.mat
+ME	Iter= 284.0000 	 Time= 9.8335001	 NrmG= 0.0000
+RelaxME	 Iter= 33.0000	 Time= 0.7411674	 NrmG= 0.0000
+MomME	 Iter= 35.0000	 Time= 0.8094578	 NrmG= 0.0000
+CG	Iter= 93.0000	 Time= 1.0684064	 NrmG= 0.0000
+DWGM	Iter= 50.0000	 Time= 0.6326346	 NrmG= 0.0000
+BB1	Iter= 84.0000	 Time= 1.8225858	 NrmG= 0.0000
+ABBmin1	Iter= 72.0000	 Time= 0.8267886	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_20.mat
-ME	Iter= 138.0000 	 Time= 0.0000000	 NrmG= 0.0000
-RelaxME	 Iter= 52.0000	 Time= 0.0000000	 NrmG= 0.0000
-MomME	 Iter= 26.0000	 Time= 0.0000000	 NrmG= 0.0000
-CG	Iter= 20.0000	 Time= 0.0000000	 NrmG= 0.0000
-DWGM	Iter= 21.0000	 Time= 0.0000000	 NrmG= 0.0000
-BB1	Iter= 88.0000	 Time= 0.0000000	 NrmG= 0.0000
-ABBmin1	Iter= 75.0000	 Time= 0.0000000	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_2000.mat
-ME	Iter= 32696.0000 	 Time= 310.8969998	 NrmG= 0.0000
-RelaxME	 Iter= 1164.0000	 Time= 4.2000000	 NrmG= 0.0000
-MomME	 Iter= 336.0000	 Time= 1.2790000	 NrmG= 0.0000
-CG	Iter= 545.0000	 Time= 3.2879999	 NrmG= 0.0000
-DWGM	Iter= 538.0000	 Time= 1.0079999	 NrmG= 0.0000
-BB1	Iter= 1993.0000	 Time= 3.6170001	 NrmG= 0.0000
-ABBmin1	Iter= 1350.0000	 Time= 2.4150000	 NrmG= 0.0000
+Arquivo: Matrices/Kuu.mat
+ME	Iter= 29513.0000 	 Time= 1368.3078077	 NrmG= 0.0000
+RelaxME	 Iter= 1144.0000	 Time= 35.2583332	 NrmG= 0.0000
+MomME	 Iter= 413.0000	 Time= 12.7089510	 NrmG= 0.0000
+CG	Iter= 712.0000	 Time= 11.1337830	 NrmG= 0.0000
+DWGM	Iter= 663.0000	 Time= 10.4341283	 NrmG= 0.0000
+BB1	Iter= 1376.0000	 Time= 42.0703310	 NrmG= 0.0000
+ABBmin1	Iter= 1122.0000	 Time= 17.2900812	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_20b.mat
-ME	Iter= 72.0000 	 Time= 0.0000000	 NrmG= 0.0000
-RelaxME	 Iter= 34.0000	 Time= 0.0000000	 NrmG= 0.0000
-MomME	 Iter= 20.0000	 Time= 0.0009999	 NrmG= 0.0000
-CG	Iter= 19.0000	 Time= 0.0000000	 NrmG= 0.0000
-DWGM	Iter= 20.0000	 Time= 0.0000000	 NrmG= 0.0000
-BB1	Iter= 67.0000	 Time= 0.0000000	 NrmG= 0.0000
-ABBmin1	Iter= 60.0000	 Time= 0.0000000	 NrmG= 0.0000
+Arquivo: Matrices/LF10.mat
+ME	Iter= 500000.0000 	 Time= 0.2910678	 NrmG= 0.1070
+RelaxME	 Iter= 11119.0000	 Time= 0.0139615	 NrmG= 0.0000
+MomME	 Iter= 576.0000	 Time= 0.0011270	 NrmG= 0.0000
+CG	Iter= 47.0000	 Time= 0.0000228	 NrmG= 0.0000
+DWGM	Iter= 52.0000	 Time= 0.0000291	 NrmG= 0.0000
+BB1	Iter= 56469.0000	 Time= 0.0345160	 NrmG= 0.0000
+ABBmin1	Iter= 2911.0000	 Time= 0.0015184	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_300.mat
-ME	Iter= 3742.0000 	 Time= 0.5159998	 NrmG= 0.0000
-RelaxME	 Iter= 399.0000	 Time= 0.0200002	 NrmG= 0.0000
-MomME	 Iter= 122.0000	 Time= 0.0070000	 NrmG= 0.0000
-CG	Iter= 178.0000	 Time= 0.0149999	 NrmG= 0.0000
-DWGM	Iter= 178.0000	 Time= 0.0090001	 NrmG= 0.0000
-BB1	Iter= 450.0000	 Time= 0.0109999	 NrmG= 0.0000
-ABBmin1	Iter= 411.0000	 Time= 0.0100000	 NrmG= 0.0000
+Arquivo: Matrices/Muu.mat
+ME	Iter= 41.0000 	 Time= 1.9187869	 NrmG= 0.0000
+RelaxME	 Iter= 21.0000	 Time= 0.6481658	 NrmG= 0.0000
+MomME	 Iter= 16.0000	 Time= 0.5087381	 NrmG= 0.0000
+CG	Iter= 32.0000	 Time= 0.5324427	 NrmG= 0.0000
+DWGM	Iter= 31.0000	 Time= 0.4931848	 NrmG= 0.0000
+BB1	Iter= 39.0000	 Time= 1.2222348	 NrmG= 0.0000
+ABBmin1	Iter= 37.0000	 Time= 0.6568082	 NrmG= 0.0000
 
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\datasets\Trefethen_500.mat
-ME	Iter= 6720.0000 	 Time= 3.4670000	 NrmG= 0.0000
-RelaxME	 Iter= 484.0000	 Time= 0.1020000	 NrmG= 0.0000
-MomME	 Iter= 156.0000	 Time= 0.0350001	 NrmG= 0.0000
-CG	Iter= 243.0000	 Time= 0.0929999	 NrmG= 0.0000
-DWGM	Iter= 241.0000	 Time= 0.0260000	 NrmG= 0.0000
-BB1	Iter= 765.0000	 Time= 0.0780001	 NrmG= 0.0000
-ABBmin1	Iter= 498.0000	 Time= 0.0530000	 NrmG= 0.0000
+Arquivo: Matrices/Trefethen_150.mat
+ME	Iter= 1600.0000 	 Time= 0.0173730	 NrmG= 0.0000
+RelaxME	 Iter= 227.0000	 Time= 0.0024992	 NrmG= 0.0000
+MomME	 Iter= 82.0000	 Time= 0.0009541	 NrmG= 0.0000
+CG	Iter= 114.0000	 Time= 0.0005268	 NrmG= 0.0000
+DWGM	Iter= 115.0000	 Time= 0.0006008	 NrmG= 0.0000
+BB1	Iter= 403.0000	 Time= 0.0032595	 NrmG= 0.0000
+ABBmin1	Iter= 294.0000	 Time= 0.0012258	 NrmG= 0.0000
+
+Arquivo: Matrices/Trefethen_20.mat
+ME	Iter= 136.0000 	 Time= 0.0001072	 NrmG= 0.0000
+RelaxME	 Iter= 48.0000	 Time= 0.0000735	 NrmG= 0.0000
+MomME	 Iter= 25.0000	 Time= 0.0000509	 NrmG= 0.0000
+CG	Iter= 20.0000	 Time= 0.0000138	 NrmG= 0.0000
+DWGM	Iter= 21.0000	 Time= 0.0000148	 NrmG= 0.0000
+BB1	Iter= 88.0000	 Time= 0.0000532	 NrmG= 0.0000
+ABBmin1	Iter= 75.0000	 Time= 0.0000298	 NrmG= 0.0000
+
+Arquivo: Matrices/Trefethen_2000.mat
+ME	Iter= 32102.0000 	 Time= 164.8055842	 NrmG= 0.0000
+RelaxME	 Iter= 1175.0000	 Time= 4.0813674	 NrmG= 0.0000
+MomME	 Iter= 323.0000	 Time= 1.1291722	 NrmG= 0.0000
+CG	Iter= 545.0000	 Time= 0.9439436	 NrmG= 0.0000
+DWGM	Iter= 538.0000	 Time= 0.9361608	 NrmG= 0.0000
+BB1	Iter= 1598.0000	 Time= 4.3126404	 NrmG= 0.0000
+ABBmin1	Iter= 1165.0000	 Time= 2.0048808	 NrmG= 0.0000
+
+Arquivo: Matrices/Trefethen_20b.mat
+ME	Iter= 71.0000 	 Time= 0.0000714	 NrmG= 0.0000
+RelaxME	 Iter= 32.0000	 Time= 0.0000624	 NrmG= 0.0000
+MomME	 Iter= 20.0000	 Time= 0.0000326	 NrmG= 0.0000
+CG	Iter= 19.0000	 Time= 0.0000099	 NrmG= 0.0000
+DWGM	Iter= 20.0000	 Time= 0.0000130	 NrmG= 0.0000
+BB1	Iter= 67.0000	 Time= 0.0000472	 NrmG= 0.0000
+ABBmin1	Iter= 60.0000	 Time= 0.0000276	 NrmG= 0.0000
+
+Arquivo: Matrices/Trefethen_300.mat
+ME	Iter= 3674.0000 	 Time= 0.1375534	 NrmG= 0.0000
+RelaxME	 Iter= 386.0000	 Time= 0.0159382	 NrmG= 0.0000
+MomME	 Iter= 119.0000	 Time= 0.0049866	 NrmG= 0.0000
+CG	Iter= 178.0000	 Time= 0.0029016	 NrmG= 0.0000
+DWGM	Iter= 178.0000	 Time= 0.0032611	 NrmG= 0.0000
+BB1	Iter= 450.0000	 Time= 0.0128855	 NrmG= 0.0000
+ABBmin1	Iter= 411.0000	 Time= 0.0060859	 NrmG= 0.0000
+
+Arquivo: Matrices/Trefethen_500.mat
+ME	Iter= 6598.0000 	 Time= 0.7816970	 NrmG= 0.0000
+RelaxME	 Iter= 421.0000	 Time= 0.0402854	 NrmG= 0.0000
+MomME	 Iter= 155.0000	 Time= 0.0138524	 NrmG= 0.0000
+CG	Iter= 242.0000	 Time= 0.0116076	 NrmG= 0.0000
+DWGM	Iter= 241.0000	 Time= 0.0100280	 NrmG= 0.0000
+BB1	Iter= 765.0000	 Time= 0.0508177	 NrmG= 0.0000
+ABBmin1	Iter= 498.0000	 Time= 0.0183909	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm02.mat
+ME	Iter= 19.0000 	 Time= 0.0000593	 NrmG= 0.0000
+RelaxME	 Iter= 14.0000	 Time= 0.0000522	 NrmG= 0.0000
+MomME	 Iter= 9.0000	 Time= 0.0000310	 NrmG= 0.0000
+CG	Iter= 12.0000	 Time= 0.0000176	 NrmG= 0.0000
+DWGM	Iter= 13.0000	 Time= 0.0000206	 NrmG= 0.0000
+BB1	Iter= 26.0000	 Time= 0.0000512	 NrmG= 0.0000
+ABBmin1	Iter= 23.0000	 Time= 0.0000281	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm05.mat
+ME	Iter= 27.0000 	 Time= 0.0003170	 NrmG= 0.0000
+RelaxME	 Iter= 20.0000	 Time= 0.0002062	 NrmG= 0.0000
+MomME	 Iter= 13.0000	 Time= 0.0001420	 NrmG= 0.0000
+CG	Iter= 18.0000	 Time= 0.0000897	 NrmG= 0.0000
+DWGM	Iter= 19.0000	 Time= 0.0001008	 NrmG= 0.0000
+BB1	Iter= 32.0000	 Time= 0.0002476	 NrmG= 0.0000
+ABBmin1	Iter= 35.0000	 Time= 0.0001560	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm07.mat
+ME	Iter= 12524.0000 	 Time= 1.0564755	 NrmG= 0.0000
+RelaxME	 Iter= 596.0000	 Time= 0.0438500	 NrmG= 0.0000
+MomME	 Iter= 284.0000	 Time= 0.0210263	 NrmG= 0.0000
+CG	Iter= 369.0000	 Time= 0.0124541	 NrmG= 0.0000
+DWGM	Iter= 355.0000	 Time= 0.0137145	 NrmG= 0.0000
+BB1	Iter= 1808.0000	 Time= 0.0936485	 NrmG= 0.0000
+ABBmin1	Iter= 899.0000	 Time= 0.0256824	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm09.mat
+ME	Iter= 1.0000 	 Time= 0.0003488	 NrmG= 0.0000
+RelaxME	 Iter= 1.0000	 Time= 0.0002017	 NrmG= 0.0000
+MomME	 Iter= 0.0000	 Time= 0.0002030	 NrmG= 0.0000
+CG	Iter= 2.0000	 Time= 0.0004870	 NrmG= 0.0000
+DWGM	Iter= 3.0000	 Time= 0.0004519	 NrmG= 0.0000
+BB1	Iter= 4.0000	 Time= 0.0009644	 NrmG= 0.0000
+ABBmin1	Iter= 5.0000	 Time= 0.0007340	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm21.mat
+ME	Iter= 5.0000 	 Time= 0.0625872	 NrmG= 0.0000
+RelaxME	 Iter= 6.0000	 Time= 0.0540492	 NrmG= 0.0000
+MomME	 Iter= 2.0000	 Time= 0.0180344	 NrmG= 0.0000
+CG	Iter= 3.0000	 Time= 0.0179260	 NrmG= 0.0000
+DWGM	Iter= 4.0000	 Time= 0.0179880	 NrmG= 0.0000
+BB1	Iter= 16.0000	 Time= 0.1357834	 NrmG= 0.0000
+ABBmin1	Iter= 12.0000	 Time= 0.0643630	 NrmG= 0.0000
+
+Arquivo: Matrices/bcsstm22.mat
+ME	Iter= 563.0000 	 Time= 0.0050422	 NrmG= 0.0000
+RelaxME	 Iter= 72.0000	 Time= 0.0006352	 NrmG= 0.0000
+MomME	 Iter= 35.0000	 Time= 0.0752466	 NrmG= 0.0000
+CG	Iter= 43.0000	 Time= 0.0001700	 NrmG= 0.0000
+DWGM	Iter= 44.0000	 Time= 0.0001953	 NrmG= 0.0000
+BB1	Iter= 122.0000	 Time= 0.0007351	 NrmG= 0.0000
+ABBmin1	Iter= 121.0000	 Time= 0.0004375	 NrmG= 0.0000
+
+Arquivo: Matrices/bibd_81_2.mat
+ME	Iter= 1.0000 	 Time= 0.0074366	 NrmG= 0.0000
+RelaxME	 Iter= 1.0000	 Time= 0.0037551	 NrmG= 0.0000
+MomME	 Iter= 0.0000	 Time= 0.0038024	 NrmG= 0.0000
+CG	Iter= 1.0000	 Time= 0.0073586	 NrmG= 0.0000
+DWGM	Iter= 2.0000	 Time= 0.0074450	 NrmG= 0.0000
+BB1	Iter= 2.0000	 Time= 0.0142210	 NrmG= 0.0000
+ABBmin1	Iter= 2.0000	 Time= 0.0073830	 NrmG= 0.0000
+
+Arquivo: Matrices/fv1.mat
+ME	Iter= 26.0000 	 Time= 2.1586330	 NrmG= 0.0000
+RelaxME	 Iter= 20.0000	 Time= 1.0995248	 NrmG= 0.0000
+MomME	 Iter= 14.0000	 Time= 0.8209626	 NrmG= 0.0000
+CG	Iter= 29.0000	 Time= 0.8554080	 NrmG= 0.0000
+DWGM	Iter= 30.0000	 Time= 0.8448100	 NrmG= 0.0000
+BB1	Iter= 35.0000	 Time= 2.0301761	 NrmG= 0.0000
+ABBmin1	Iter= 33.0000	 Time= 0.9284978	 NrmG= 0.0000
+
+Arquivo: Matrices/fv2.mat
+ME	Iter= 24.0000 	 Time= 2.1007780	 NrmG= 0.0000
+RelaxME	 Iter= 20.0000	 Time= 1.1607601	 NrmG= 0.0000
+MomME	 Iter= 14.0000	 Time= 0.9435173	 NrmG= 0.0000
+CG	Iter= 29.0000	 Time= 0.8901184	 NrmG= 0.0000
+DWGM	Iter= 30.0000	 Time= 0.9109299	 NrmG= 0.0000
+BB1	Iter= 35.0000	 Time= 2.0813600	 NrmG= 0.0000
+ABBmin1	Iter= 33.0000	 Time= 0.9790256	 NrmG= 0.0000
+
+Arquivo: Matrices/lund_b.mat
+ME	Iter= 52184.0000 	 Time= 0.5145678	 NrmG= 0.0000
+RelaxME	 Iter= 1354.0000	 Time= 0.0141224	 NrmG= 0.0000
+MomME	 Iter= 455.0000	 Time= 0.0049819	 NrmG= 0.0000
+CG	Iter= 414.0000	 Time= 0.0048636	 NrmG= 0.0000
+DWGM	Iter= 430.0000	 Time= 0.0024572	 NrmG= 0.0000
+BB1	Iter= 3399.0000	 Time= 0.0237002	 NrmG= 0.0000
+ABBmin1	Iter= 1730.0000	 Time= 0.0068376	 NrmG= 0.0000
+
+Arquivo: Matrices/mesh1e1.mat
+ME	Iter= 15.0000 	 Time= 0.0000364	 NrmG= 0.0000
+RelaxME	 Iter= 15.0000	 Time= 0.0000435	 NrmG= 0.0000
+MomME	 Iter= 10.0000	 Time= 0.0000356	 NrmG= 0.0000
+CG	Iter= 20.0000	 Time= 0.0000202	 NrmG= 0.0000
+DWGM	Iter= 21.0000	 Time= 0.0000238	 NrmG= 0.0000
+BB1	Iter= 25.0000	 Time= 0.0000330	 NrmG= 0.0000
+ABBmin1	Iter= 24.0000	 Time= 0.0000206	 NrmG= 0.0000
+
+Arquivo: Matrices/mesh1em1.mat
+ME	Iter= 45.0000 	 Time= 0.0000818	 NrmG= 0.0000
+RelaxME	 Iter= 29.0000	 Time= 0.0000618	 NrmG= 0.0000
+MomME	 Iter= 20.0000	 Time= 0.0000501	 NrmG= 0.0000
+CG	Iter= 32.0000	 Time= 0.0000318	 NrmG= 0.0000
+DWGM	Iter= 33.0000	 Time= 0.0000373	 NrmG= 0.0000
+BB1	Iter= 51.0000	 Time= 0.0000632	 NrmG= 0.0000
+ABBmin1	Iter= 52.0000	 Time= 0.0000402	 NrmG= 0.0000
+
+Arquivo: Matrices/mesh1em6.mat
+ME	Iter= 17.0000 	 Time= 0.0000346	 NrmG= 0.0000
+RelaxME	 Iter= 16.0000	 Time= 0.0000422	 NrmG= 0.0000
+MomME	 Iter= 11.0000	 Time= 0.0000244	 NrmG= 0.0000
+CG	Iter= 20.0000	 Time= 0.0000166	 NrmG= 0.0000
+DWGM	Iter= 21.0000	 Time= 0.0000204	 NrmG= 0.0000
+BB1	Iter= 27.0000	 Time= 0.0000299	 NrmG= 0.0000
+ABBmin1	Iter= 26.0000	 Time= 0.0000194	 NrmG= 0.0000
+
+Arquivo: Matrices/mesh3em5.mat
+ME	Iter= 14.0000 	 Time= 0.0005317	 NrmG= 0.0000
+RelaxME	 Iter= 14.0000	 Time= 0.0007271	 NrmG= 0.0000
+MomME	 Iter= 10.0000	 Time= 0.0005913	 NrmG= 0.0000
+CG	Iter= 18.0000	 Time= 0.0004160	 NrmG= 0.0000
+DWGM	Iter= 19.0000	 Time= 0.0004953	 NrmG= 0.0000
+BB1	Iter= 24.0000	 Time= 0.0007407	 NrmG= 0.0000
+ABBmin1	Iter= 23.0000	 Time= 0.0004774	 NrmG= 0.0000
+
+Arquivo: Matrices/mhd3200b.mat
+ME	Iter= 500000.0000 	 Time= 5545.1650430	 NrmG= 0.0000
+RelaxME	 Iter= 2764.0000	 Time= 20.4574440	 NrmG= 0.0000
+MomME	 Iter= 17874.0000	 Time= 134.4756059	 NrmG= 0.0000
+CG	Iter= 5198.0000	 Time= 20.1367672	 NrmG= 0.0000
+DWGM	Iter= 2218.0000	 Time= 8.6713758	 NrmG= 0.0000
+BB1	Iter= 13327.0000	 Time= 92.9306453	 NrmG= 0.0000
+ABBmin1	Iter= 9094.0000	 Time= 34.0988301	 NrmG= 0.0000
+
+
 

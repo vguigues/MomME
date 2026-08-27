@@ -1,24 +1,24 @@
-Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\images\4.1.06.tiff
-BB1_IS	Iter= 386.0000 	 Time= 7.2749999	 NrmG= 0.0000
-
-MEM_IS	Iter= 151.0000 	 Time= 7.4760001	 NrmG= 0.0000
-
-ABBmin1_IS	Iter= 376.0000 	 Time= 6.0079999	 NrmG= 0.0000
-ellip_center_Relaxed	Iter= 318.0000 	 Time= 10.1940000	 NrmG= 0.0000
-
-ellip_center_IS	Iter= 1611.0000 	 Time= 46.6530001	 NrmG= 0.0000
-
-CG_IS	Iter= 304.0000 	 Time= 3.9919999	 NrmG= 0.0000
-
 Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\images\boat.tiff
-BB1_IS	Iter= 404.0000 	 Time= 24.5139999	 NrmG= 0.0000
+BB1_IS	Iter= 404.0000 	 Time= 34.3120000	 NrmG= 0.0000
 
-MEM_IS	Iter= 155.0000 	 Time= 31.3280001	 NrmG= 0.0000
+MEM_IS	Iter= 155.0000 	 Time= 40.3820000	 NrmG= 0.0000
 
-ABBmin1_IS	Iter= 399.0000 	 Time= 27.8789999	 NrmG= 0.0000
-ellip_center_Relaxed	Iter= 236.0000 	 Time= 34.2919998	 NrmG= 0.0000
+ABBmin1_IS	Iter= 399.0000 	 Time= 32.9849999	 NrmG= 0.0000
+ellip_center_Relaxed	Iter= 217.0000 	 Time= 48.8340001	 NrmG= 0.0000
 
-ellip_center_IS	Iter= 1643.0000 	 Time= 220.3209999	 NrmG= 0.0000
+ellip_center_IS	Iter= 1615.0000 	 Time= 357.6870000	 NrmG= 0.0000
 
-CG_IS	Iter= 310.0000 	 Time= 15.8239999	 NrmG= 0.0000
+CG_IS	Iter= 310.0000 	 Time= 19.6220000	 NrmG= 0.0000
+
+Arquivo: C:\Users\vince\Dropbox\Softwares\Relaxed_ME\MATLAB\Experiments\images\male.tiff
+BB1_IS	Iter= 418.0000 	 Time= 199.5929999	 NrmG= 0.0000
+
+MEM_IS	Iter= 160.0000 	 Time= 140.6170001	 NrmG= 0.0000
+
+ABBmin1_IS	Iter= 386.0000 	 Time= 177.8820000	 NrmG= 0.0000
+ellip_center_Relaxed	Iter= 232.0000 	 Time= 232.0020001	 NrmG= 0.0000
+
+ellip_center_IS	Iter= 1719.0000 	 Time= 1711.1020000	 NrmG= 0.0000
+
+CG_IS	Iter= 322.0000 	 Time= 172.6110001	 NrmG= 0.0000
 

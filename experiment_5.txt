@@ -1,24 +1,32 @@
 n = 1000
-ME	Iter= 1.0000 	 Time= 0.0002000	 NrmG= 0.0000
-REM	 Iter= 1.0000	 Time= 0.0036000	 NrmG= 0.0000
-MEM	 Iter= 1.0000	 Time= 0.0046000	 NrmG= 0.0000
-CG	Iter= 2.0000	 Time= 0.0004000	 NrmG= 0.0000
-DWGM	Iter= 3.0000	 Time= 0.0004000	 NrmG= 0.0000
-BB1	Iter= 9.0000	 Time= 0.0088000	 NrmG= 0.0000
-ABBmin1	Iter= 9.0000	 Time= 0.0018000	 NrmG= 0.0000
+ME	Iter= 1.0000 	 Time= 0.0000000	 NrmG= 0.0000
+REM	 Iter= 1.0000	 Time= 0.0043333	 NrmG= 0.0000
+MEM	 Iter= 1.0000	 Time= 0.0000000	 NrmG= 0.0000
+CG	Iter= 2.0000	 Time= 0.0000000	 NrmG= 0.0000
+DWGM	Iter= 3.0000	 Time= 0.0000000	 NrmG= 0.0000
+BB1	Iter= 9.0000	 Time= 0.0000000	 NrmG= 0.0000
+ABBmin1	Iter= 9.0000	 Time= 0.0000000	 NrmG= 0.0000
 n = 5000
-ME	Iter= 1.0000 	 Time= 0.0490000	 NrmG= 0.0000
-REM	 Iter= 1.0000	 Time= 0.0616000	 NrmG= 0.0000
-MEM	 Iter= 1.0000	 Time= 0.0416000	 NrmG= 0.0000
-CG	Iter= 2.0000	 Time= 0.0440000	 NrmG= 0.0000
-DWGM	Iter= 3.0000	 Time= 0.0532000	 NrmG= 0.0000
-BB1	Iter= 9.0000	 Time= 0.1528001	 NrmG= 0.0000
-ABBmin1	Iter= 9.0000	 Time= 0.1304001	 NrmG= 0.0000
+ME	Iter= 1.0000 	 Time= 0.0343333	 NrmG= 0.0000
+REM	 Iter= 1.0000	 Time= 0.0193333	 NrmG= 0.0000
+MEM	 Iter= 1.0000	 Time= 0.0190001	 NrmG= 0.0000
+CG	Iter= 2.0000	 Time= 0.0323334	 NrmG= 0.0000
+DWGM	Iter= 3.0000	 Time= 0.0333334	 NrmG= 0.0000
+BB1	Iter= 9.0000	 Time= 0.1063333	 NrmG= 0.0000
+ABBmin1	Iter= 9.0000	 Time= 0.0930000	 NrmG= 0.0000
 n = 10000
-ME	Iter= 1.0000 	 Time= 0.1967999	 NrmG= 0.0000
-REM	 Iter= 1.0000	 Time= 0.1914000	 NrmG= 0.0000
-MEM	 Iter= 1.0000	 Time= 0.1948000	 NrmG= 0.0000
-CG	Iter= 2.0000	 Time= 0.1894001	 NrmG= 0.0000
-DWGM	Iter= 3.0000	 Time= 0.1890001	 NrmG= 0.0000
-BB1	Iter= 9.0000	 Time= 0.5993999	 NrmG= 0.0000
-ABBmin1	Iter= 9.0000	 Time= 0.5516000	 NrmG= 0.0000
+ME	Iter= 1.0000 	 Time= 0.1253334	 NrmG= 0.0000
+REM	 Iter= 1.0000	 Time= 0.0793333	 NrmG= 0.0000
+MEM	 Iter= 1.0000	 Time= 0.0843333	 NrmG= 0.0000
+CG	Iter= 2.0000	 Time= 0.1263333	 NrmG= 0.0000
+DWGM	Iter= 3.0000	 Time= 0.1283333	 NrmG= 0.0000
+BB1	Iter= 9.0000	 Time= 0.4116668	 NrmG= 0.0000
+ABBmin1	Iter= 9.0000	 Time= 0.3690000	 NrmG= 0.0000
+n = 20000
+ME	Iter= 1.0000 	 Time= 0.9313332	 NrmG= 0.0000
+REM	 Iter= 1.0000	 Time= 0.4636668	 NrmG= 0.0000
+MEM	 Iter= 1.0000	 Time= 0.4953334	 NrmG= 0.0000
+CG	Iter= 2.0000	 Time= 0.7266667	 NrmG= 0.0000
+DWGM	Iter= 3.0000	 Time= 0.6696668	 NrmG= 0.0000
+BB1	Iter= 9.0000	 Time= 2.3403333	 NrmG= 0.0000
+ABBmin1	Iter= 9.0000	 Time= 1.8423333	 NrmG= 0.0000
